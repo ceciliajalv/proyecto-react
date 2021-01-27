@@ -10,7 +10,7 @@ const NavBar = () => {
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav mr-auto">
                 <li className="nav-item active">
-                  <a className="nav-link" href="index.html">Home <span className="sr-only">(current)</span></a>
+                  <a className="nav-link" href="index.html">Home</a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="#aboutUs">About</a>
