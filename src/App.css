@@ -42,3 +42,7 @@
 .nav-link:hover, .navbar-bordeaux:hover, .navbar-nav:hover, .nav-item:hover{ 
   color: #DE76A9;
 }
+.carritoicon {
+  height: 2rem;
+  width: 2rem;
+}

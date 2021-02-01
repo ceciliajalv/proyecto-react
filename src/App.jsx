@@ -3,16 +3,14 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ButtonComponent from './components/button';
 import NavBar from './components/navbar/';
-// import ItemListContainer from './Containers/ItemListContainer';
+import ItemListContainer from './Containers/ItemListContainer';
 
 const App = () => {
   return (
     <>
     <NavBar/>
-    {/* <ButtonComponent text={`Prueba`} /> */}
-      {/* <h1>Hola mundo!</h1>
-      <ButtonComponent text={`Prueba`} />
-      <ItemListContainer greeting={"Bienvenidos a React.JS"}/> */}
+    <h1>Bienvenidos</h1>
+    <ItemListContainer servicios={"Servicios Profesionales"}/>
     </>
   );
 }
