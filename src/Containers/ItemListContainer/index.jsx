@@ -18,7 +18,7 @@ const ItemListContainer = ({servicios},) => {
     const onBuy = () => {
         setStock(stock - contador);
         setContador(1)
-        if (stock == 0) {
+        if (stock == contador) {
             setBtnCompra("Sin Stock")
         }        
     }
