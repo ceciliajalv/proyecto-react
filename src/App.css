@@ -46,3 +46,19 @@
   height: 2rem;
   width: 2rem;
 }
+.card {
+  border: 1px solid brown;
+  border-radius: 1rem;
+  width: 24rem;
+  margin: 0.1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  
+}
+.listProd {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

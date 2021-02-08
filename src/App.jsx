@@ -9,7 +9,7 @@ const App = () => {
   return (
     <>
     <NavBar/>
-    <h1>Bienvenidos</h1>
+    <h2>Adquirí nuestros productos</h2>
     <ItemListContainer servicios={"Servicios Profesionales"}/>
     </>
   );
