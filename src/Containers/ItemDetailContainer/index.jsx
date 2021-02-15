@@ -10,9 +10,9 @@ const ItemDetailContainer = () => {
     const [item, setItem] = useState([]);
     React.useEffect(()=>{
        const miPromesaDos = new Promise ((resolve, reject) =>{
-        const producDetail = productList.find(id);
+        const producDetail = productList.find(prod => prod.id === id)
         setTimeout(() =>
-            resolve(producDetail), 2000);
+            resolve(productList[id]), 2000);
             
     });
 
