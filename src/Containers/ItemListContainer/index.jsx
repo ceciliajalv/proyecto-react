@@ -13,33 +13,12 @@ const ItemListContainer = ({servicios},) => {
     });
 
     miPromesa.then((result) => setProducts(result)); 
-    }, []);
-    
-    const [contador, setContador] = useState(1)
-    const [stock, setStock] = useState(10)
-    const [btnCompra, setBtnCompra] = useState("Comprar")
-    const onAdd = () => {
-        if (contador < stock) {
-            setContador(contador + 1);  
-        }
-    }
-    const onSub = () => {
-        if (contador > 1) {
-            setContador(contador - 1);
-        }
-    }
-    const onBuy = () => {
-        setStock(stock - contador);
-        setContador(1)
-        if (stock == contador) {
-            setBtnCompra("Sin Stock")
-        }        
-    }
+    }, []);    
 
     return (
         <>
+        <h2>Adquirí nuestros productos</h2>
         <ItemList products={products}/>
-        <ItemCount contador={contador} onAdd={onAdd} onSub={onSub} onBuy={onBuy} btnCompra={btnCompra}/>
         </>
     )
 }

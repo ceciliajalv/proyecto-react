@@ -14,15 +14,16 @@ const NavBar = () => {
                   <a className="nav-link" href="index.html">Home</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#aboutUs">About</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#servicios">Servicios</a>
-                </li>
-                <li className="nav-item">
                   <a className="nav-link" href="#roaster">Artistas</a>
-                </li><li className="nav-item">
-                    <a className="nav-link" href="#contrataciones">Contrataciones</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#productos">Productos</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#merch">Merch</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#VIP">Entradas y paquetes VIP</a>
                 </li>
                 <li className="nav-item">
                     <a className="nav-link" href="#contactanos">Contacto</a>
