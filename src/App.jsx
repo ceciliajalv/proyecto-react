@@ -20,6 +20,9 @@ const App = () => {
       <Route exact path='/'>
         <Home />
       </Route>
+      <Route exact path='/proyecto-react/'>
+        <Home />
+      </Route>
       <Route exact path='/productos'>
         <ItemListContainer />
       </Route>
