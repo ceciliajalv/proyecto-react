@@ -7,8 +7,9 @@ import NavBar from './components/navbar/';
 import ItemListContainer from './Containers/ItemListContainer';
 import ItemDetailContainer from './Containers/ItemDetailContainer';
 import Home from './Containers/homeContainer';
-import ArtistasContainer from './Containers/ArtistasContainer'
-
+import ArtistasContainer from './Containers/ArtistasContainer';
+import ContactoContainer from './Containers/ContactoContainer/index.jsx';
+import CategoriaContainer from './Containers/CategoriaContainer';
 
 
 const App = () => {
@@ -16,17 +17,23 @@ const App = () => {
   <BrowserRouter>
     <NavBar/>
     <Switch>
-      <Route exact path='/proyecto-react/'>
+      <Route exact path='/'>
         <Home />
       </Route>
-      <Route exact path='/proyecto-react/productos'>
+      <Route exact path='/productos'>
         <ItemListContainer />
       </Route>
-      <Route exact path = '/proyecto-react/artistas'>
+      <Route exact path = '/artistas'>
         <ArtistasContainer />
       </Route>
-      <Route exact path = '/proyecto-react/productos/:id'>
+      <Route exact path = '/productos/:id'>
         <ItemDetailContainer />
+      </Route>
+      <Route exact path = '/categoria/:idCat'>
+        <CategoriaContainer />
+      </Route>
+      <Route exact path = '/contactanos'>
+        <ContactoContainer />
       </Route>
       <Route path="*" children={<div>No encontramos la página que está buscando.</div>} />
     </Switch>
