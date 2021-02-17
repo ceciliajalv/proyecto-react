@@ -17,8 +17,11 @@ const ItemListContainer = ({servicios},) => {
 
     return (
         <>
+        <div className='listContainer'>
         <h2>Adquirí nuestros productos</h2>
-        <ItemList products={products}/>
+            <ItemList products={products}/>
+        </div>
+        
         </>
     )
 }

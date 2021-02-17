@@ -25,8 +25,13 @@ const ItemDetail = ({item}) => {
     }
     const onBuy = () => {
         setStock(item.stock);
-        setQuantity(contador);
-        setStock(item.stock - contador);
+        if (quantity == 0) {
+            setQuantity(contador);
+        }
+        else {
+            setQuantity(contador + quantity);
+        }        
+        setStock(stock - contador);
         setContador(1);
         if (stock == contador) {
             setBtnCompra("Sin Stock")

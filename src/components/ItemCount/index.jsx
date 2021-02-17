@@ -4,7 +4,7 @@ export const ItemCount = ({stock, onAdd, onSub, onBuy, contador, btnCompra}) => 
         <div>
             <button onClick={onSub} disabled={contador == 1}>-</button>
             <b>{contador}</b>
-            <button  onClick={onAdd} disabled={contador == stock}>+</button>
+            <button  onClick={onAdd} disabled={contador == stock || contador > stock}>+</button>
             <p>Stock:{stock}</p>
         </div>
         <div>
