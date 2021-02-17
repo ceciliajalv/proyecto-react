@@ -10,6 +10,7 @@ import Home from './Containers/homeContainer';
 import ArtistasContainer from './Containers/ArtistasContainer';
 import ContactoContainer from './Containers/ContactoContainer/index.jsx';
 import CategoriaContainer from './Containers/CategoriaContainer';
+import Cart from './components/cart';
 
 
 const App = () => {
@@ -20,7 +21,7 @@ const App = () => {
       <Route exact path='/'>
         <Home />
       </Route>
-      <Route exact path='/proyecto-react/'>
+      <Route exact path='/proyecto-react'>
         <Home />
       </Route>
       <Route exact path='/productos'>
@@ -37,6 +38,9 @@ const App = () => {
       </Route>
       <Route exact path = '/contactanos'>
         <ContactoContainer />
+      </Route>
+      <Route exact path = '/cart'>
+        <Cart />
       </Route>
       <Route path="*" children={<div>No encontramos la página que está buscando.</div>} />
     </Switch>

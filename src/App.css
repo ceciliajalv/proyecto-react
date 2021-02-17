@@ -63,3 +63,7 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+#terminarCompra {
+  visibility: hidden;
+}
