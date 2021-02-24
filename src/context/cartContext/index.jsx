@@ -19,7 +19,7 @@ export const CartProvider = ({children}) =>{
         if (estaCarrito === -1){
         setProduct([...product, item])
         }else{
-        let NuevoItem= {...product[estaCarrito], quantity:  product[estaCarrito].quantity + item.quantity}
+        let NuevoItem= {...product[estaCarrito], cantidad:  product[estaCarrito].cantidad + item.cantidad}
         let listaNueva = product.filter(prod => item.item.id !== prod.item.id)
         setProduct([...listaNueva, NuevoItem])
         }
