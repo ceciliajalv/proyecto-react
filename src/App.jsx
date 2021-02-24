@@ -11,12 +11,15 @@ import ArtistasContainer from './Containers/ArtistasContainer';
 import ContactoContainer from './Containers/ContactoContainer/index.jsx';
 import CategoriaContainer from './Containers/CategoriaContainer';
 import Cart from './components/cart';
-
+import { GlobalContext } from './context/GlobalContext';
+import CartProvider from './context/cartContext/'
 
 const App = () => {
   return (
+  <GlobalContext.Provider>
   <BrowserRouter>
-    <NavBar/>
+  <CartProvider>
+      <NavBar/>
     <Switch>
       <Route exact path='/'>
         <Home />
@@ -44,7 +47,10 @@ const App = () => {
       </Route>
       <Route path="*" children={<div>No encontramos la página que está buscando.</div>} />
     </Switch>
+ 
+  </CartProvider>
   </BrowserRouter>
+  </GlobalContext.Provider>
   );
 }
 

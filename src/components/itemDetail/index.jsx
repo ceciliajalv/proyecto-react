@@ -1,15 +1,20 @@
 import * as React from "react";
+import {useContext} from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ItemCount } from "../../components/ItemCount";
 import productList from "../../mocks/productList/index";
 import {useParams} from "react-router-dom";
+import {CartContext} from '../../context/cartContext/'
 
 const ItemDetail = ({item}) => {
     const [contador, setContador] = useState(1)
     const [stock, setStock] = useState(1)
     const [btnCompra, setBtnCompra] = useState("Comprar")
     const [quantity, setQuantity] = useState (0)
+
+    const { addCart , product} = useContext(CartContext)
+
     const Load = () => {
         setStock(item.stock)
     }
@@ -36,8 +41,13 @@ const ItemDetail = ({item}) => {
         if (stock == contador) {
             setBtnCompra("Sin Stock")
         } 
+        
+        console.log ('Se agregaron ', contador, ' productos al carrito')
+        addCart ({item: item, cantidad: contador})
         document.getElementById('terminarCompra').style.visibility = "visible";
+        
     }
+    console.log ([product])
 return (
     <>
     <div key={item.id} product={item} onLoad={Load}>
