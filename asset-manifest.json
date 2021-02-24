@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/proyecto-react/static/css/main.1cb70e37.chunk.css",
-    "main.js": "/proyecto-react/static/js/main.1c6a7d32.chunk.js",
-    "main.js.map": "/proyecto-react/static/js/main.1c6a7d32.chunk.js.map",
-    "runtime-main.js": "/proyecto-react/static/js/runtime-main.61560eb7.js",
-    "runtime-main.js.map": "/proyecto-react/static/js/runtime-main.61560eb7.js.map",
+    "main.js": "/proyecto-react/static/js/main.57579e98.chunk.js",
+    "main.js.map": "/proyecto-react/static/js/main.57579e98.chunk.js.map",
+    "runtime-main.js": "/proyecto-react/static/js/runtime-main.96ed4447.js",
+    "runtime-main.js.map": "/proyecto-react/static/js/runtime-main.96ed4447.js.map",
     "static/css/2.150d169a.chunk.css": "/proyecto-react/static/css/2.150d169a.chunk.css",
-    "static/js/2.c5ddfc5c.chunk.js": "/proyecto-react/static/js/2.c5ddfc5c.chunk.js",
-    "static/js/2.c5ddfc5c.chunk.js.map": "/proyecto-react/static/js/2.c5ddfc5c.chunk.js.map",
-    "static/js/3.142aefd5.chunk.js": "/proyecto-react/static/js/3.142aefd5.chunk.js",
-    "static/js/3.142aefd5.chunk.js.map": "/proyecto-react/static/js/3.142aefd5.chunk.js.map",
+    "static/js/2.e45ddb49.chunk.js": "/proyecto-react/static/js/2.e45ddb49.chunk.js",
+    "static/js/2.e45ddb49.chunk.js.map": "/proyecto-react/static/js/2.e45ddb49.chunk.js.map",
+    "static/js/3.dbc8e09e.chunk.js": "/proyecto-react/static/js/3.dbc8e09e.chunk.js",
+    "static/js/3.dbc8e09e.chunk.js.map": "/proyecto-react/static/js/3.dbc8e09e.chunk.js.map",
     "index.html": "/proyecto-react/index.html",
     "static/css/2.150d169a.chunk.css.map": "/proyecto-react/static/css/2.150d169a.chunk.css.map",
     "static/css/main.1cb70e37.chunk.css.map": "/proyecto-react/static/css/main.1cb70e37.chunk.css.map",
-    "static/js/2.c5ddfc5c.chunk.js.LICENSE.txt": "/proyecto-react/static/js/2.c5ddfc5c.chunk.js.LICENSE.txt",
+    "static/js/2.e45ddb49.chunk.js.LICENSE.txt": "/proyecto-react/static/js/2.e45ddb49.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/proyecto-react/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.61560eb7.js",
+    "static/js/runtime-main.96ed4447.js",
     "static/css/2.150d169a.chunk.css",
-    "static/js/2.c5ddfc5c.chunk.js",
+    "static/js/2.e45ddb49.chunk.js",
     "static/css/main.1cb70e37.chunk.css",
-    "static/js/main.1c6a7d32.chunk.js"
+    "static/js/main.57579e98.chunk.js"
   ]
 }
