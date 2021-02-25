@@ -1,37 +1,46 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState } from "react";
 
-export const CartContext = createContext()
+export const CartContext = createContext();
 
-
-export const CartProvider = ({children}) =>{
-    const [product, setProduct] = useState ([])
+export const CartProvider = ({ children }) => {
+    const [product, setProduct] = useState([]);
     console.log(product);
 
-    const isInCart = (id) => {
-        return product.findIndex(prod => prod.id === id)
-    }
+    
 
     const addCart = (item) => {
         console.log(item);
+        const isInCart = (id) => {
+            console.log('id', id)
+            return product.findIndex((prod) => prod.item.id === id);
+        };
 
-        let estaCarrito = isInCart(item.item.id)
-        console.log(estaCarrito);
-        if (estaCarrito === -1){
-        setProduct([...product, item])
-        }else{
-        let NuevoItem= {...product[estaCarrito], cantidad:  product[estaCarrito].cantidad + item.cantidad}
-        let listaNueva = product.filter(prod => item.item.id !== prod.item.id)
-        setProduct([...listaNueva, NuevoItem])
-        }
-    }
+        let estaCarrito = isInCart(item.item.id);
+        if (estaCarrito === -1) {
+            setProduct([...product, item]);
+            console.log('La cantidad de items id:', item.item.id, ' en el carrito es de ', item.cantidad)
+        } 
+        else {
+            const newProducto = [...product];
+            newProducto.forEach(prod => {
+                if(prod.item.id === item.item.id){
+                    item.cantidad += prod.cantidad
+                 }
+                console.log('La cantidad de items id:', item.item.id, ' en el carrito es de ', item.cantidad)
+             })
+             setProduct(newProducto);
+            }
+    };
 
-    return (
-        <CartContext.Provider value={{
-            product,
-            addCart,
-        }}>
-            {children}
-        </CartContext.Provider>
-    )
-}
+  return (
+    <CartContext.Provider
+      value={{
+        product,
+        addCart,
+      }}
+    >
+      {children}
+    </CartContext.Provider>
+  );
+};
 export default CartProvider;
