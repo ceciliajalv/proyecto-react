@@ -12,6 +12,7 @@ const ItemDetail = ({item}) => {
     const [stock, setStock] = useState(1)
     const [btnCompra, setBtnCompra] = useState("Comprar")
     const [quantity, setQuantity] = useState (0)
+    const [priceTot, setPriceTot] = useState(0)
 
     const { addCart , product} = useContext(CartContext)
 
@@ -29,25 +30,29 @@ const ItemDetail = ({item}) => {
         }
     }
     const onBuy = () => {
+        debugger
         setStock(item.stock);
-        if (quantity == 0) {
-            setQuantity(contador);
-        }
-        else {
-            setQuantity(contador + quantity);
-        }        
+        setQuantity(contador);
+        // if (quantity == 0) {
+        //     setQuantity(contador);
+        // }
+        // else {
+        //     setQuantity(contador + quantity);
+        // }        
         setStock(stock - contador);
         setContador(1);
         if (stock == contador) {
             setBtnCompra("Sin Stock")
         } 
         
-        console.log ('Se agregaron ', contador, ' productos al carrito')
-        addCart ({item: item, cantidad: contador})
+        console.log ('Se agregaron ', contador, ' productos al carrito');
+        setPriceTot(item.price * contador);
+        console.log('priceTot', priceTot);
+        addCart ({item: item, cantidad: contador, price: item.price, name: item.name, id: item.id, priceTot: priceTot});
         document.getElementById('terminarCompra').style.visibility = "visible";
-        
     }
     console.log ([product])
+    
 return (
     <>
     <div key={item.id} product={item} onLoad={Load}>
@@ -57,8 +62,8 @@ return (
         <p>Precio: ${item.price}</p>
         <ItemCount contador={contador} onAdd={onAdd} onSub={onSub} onBuy={onBuy} btnCompra={btnCompra} stock={stock}/>
         <div id='terminarCompra'>
-            <p>Usted esta adquiriendo {quantity} {item.name}</p>
-            <Link to={`/cart`} quantity={quantity}><button>Terminar compra</button></Link> 
+            <p>Se han agregado exitosamente {quantity} {item.name} al carrito</p>
+            <Link to={`/cart`} quantity={quantity}><button className='confirmar'>Terminar compra</button></Link> 
         </div>
     </div>
     </>

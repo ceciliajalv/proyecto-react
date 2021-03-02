@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import loader from '../src/mocks/productList/img/loading-02.gif'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';

@@ -47,6 +47,9 @@
   height: 2rem;
   width: 2rem;
 }
+div.carritoicon{
+  margin-right: 2rem;
+}
 .card {
   border: 1px solid brown;
   border-radius: 1rem;
@@ -72,4 +75,528 @@
 
 #terminarCompra {
   visibility: hidden;
+}
+
+
+
+/* css copiado de projecto js */
+
+
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+h1 {
+  font-size: 5rem;
+  color: #DE76A9;
+  -webkit-text-stroke: 2px #533B4D;
+  font-family: 'Bungee Inline', cursive;
+}
+h2 {
+  font-size: 3rem;
+  color: #533B4D;
+  font-family: 'Bungee Inline', cursive;
+}
+h3 {
+  font-size: 2.3rem;
+  color: #533B4D;
+  font-family: 'Lobster', cursive;
+}
+h4 {
+  font-family: 'Lobster', cursive;
+}
+p, label, div.checkbox {
+  font-family: 'Lobster', cursive;
+  font-size: 1.2rem;
+}
+input, select {
+  font-family: 'Lobster', cursive;
+  font-size: 1.1rem;
+  background: none;
+  border: none;
+  border-bottom: #6D517A solid 1px;
+  color: #6D517A;
+  margin-bottom: 1rem;
+  margin-top: 0rem;
+  padding-left: 0.5rem;
+}
+#contactanos input, #contactanos select, #contactanos textarea {
+  color: #533B4D;
+}
+
+
+
+input:focus, select:focus {
+  font-family: 'Lobster', cursive;
+  font-size: 1.1rem;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: black solid 1.5px;
+  color: #6D517A;
+}
+
+th {
+  font-family: 'Bungee Inline', cursive;
+}
+td {
+  font-family: 'Lobster', cursive;
+}
+button {
+  font-family: 'Lobster', cursive;
+}
+a {
+  font-family: 'Lobster', cursive;
+}
+li a { 
+  font-size: 1.4rem;
+  margin-top: -0.4rem;
+  color: #6D517A;
+}
+h2.logo {
+  font-size: 2rem;
+  padding: 0rem;
+  color: #DE76A9;
+}
+header {
+  background-color: #E9E0F5;
+  position: sticky;
+  top: 0rem;
+  height: 4rem;
+  z-index: 100;
+  filter: drop-shadow(2px -2px 6px #6D517A);
+}
+.navbar-bordeaux, .navbar-nav, .nav-link{
+  color: #533B4D;
+}
+.nav-link:hover, .navbar-bordeaux:hover, .navbar-nav:hover, .nav-item:hover{ 
+  color: #DE76A9;
+}
+section {
+  padding-left: 1rem;
+  padding-top: 6rem;
+  margin-top: 0rem;
+}
+section#hero {
+  height: 95vh;
+  background-color: #C14A86;
+  background-image: url(../src/mocks/productList/img/concert2.jpg);
+  background-size: cover;
+  background-position-y: -7rem;
+}
+section#aboutUs, section#contrataciones {
+  background-color: #FDD8E9;
+}
+section#servicios, section#contactanos, section#infoart {
+  background-color: #C14A86;
+}
+section#servicios {
+  filter: drop-shadow(2px 9px 12px #7C2D58);
+}
+section#roaster, section#adquirir {
+  background-color: #7C2D58;
+  filter: drop-shadow(2px -6px 10px #7C2D58);
+}
+#roaster h2, #roaster h3 {
+  color: #FDD8E9;
+}
+section#aboutUs, section#roaster, section#infoart {
+  height: 100vh;
+}
+section#contrataciones {
+  height: 110vh;
+  filter: drop-shadow(2px 9px 12px #7C2D58);
+}
+section#servicios {
+  height: 120vh;
+}
+section#contactanos{
+  height: 142vh;
+  filter: drop-shadow(2px -6px 10px #7C2D58);
+  overflow-y: hidden;
+}
+section#adquirir{
+  height: 150vh;
+}
+section#adquirir h2, section#adquirir h4, section#adquirir table, section#adquirir p {
+  margin-left: 1rem;
+  color: #FDD8E9;
+}
+.herobox {
+  background-color: rgba(233, 224, 245, 0.4);
+  margin-top: -4rem;
+  padding: 1rem;
+}
+#hero h3 {
+  color: #533B4D;
+  -webkit-text-stroke: 0.5px #DE76A9;
+}
+.roaster-lista, .productos-lista {
+  padding-top: 3rem;
+}
+.roaster-lista img {
+  margin-top: 1rem;
+}
+#aboutUs h4 {
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count: 2; /* Firefox */
+  column-count: 2;
+  column-gap: 2rem;
+  padding: 2rem;
+  text-align: justify;
+  margin-top: 3rem;
+}
+.formulario fieldset, #contrataciones fieldset {
+  width: 35rem;
+  border: none;
+}
+.formulario fieldset {
+  margin-left: 1rem;
+}
+#contactanos h2 {
+  margin-left: 1rem;
+}
+#muchasGracias {
+  font-size: 1.8rem;
+  color: #7C2D58;
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+#resTarifa {
+  padding: 7rem 3rem 0rem 1rem;
+  font-size: 1.7rem;
+  display: flex;
+  width: 45%;
+  text-align: justify;
+}
+.bodyhome {
+  height: 100vh;
+  overflow-y: hidden;
+  background-image: url(../src/mocks/productList/img/concert2.jpg);
+  background-size: cover;
+}
+section#inicio {
+  padding: 0px;
+  bottom: 0px;
+}
+div#hero {
+  height: 73vh;
+}
+.cardW {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1rem;
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+#cisum {
+  font-size: 5rem;
+}
+#bym {
+  font-size: 3rem;
+}
+.selectWeb {
+  background-color: #C14A86;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+div#soyArt, div#soyCont, div#soyFan {
+  padding-left: 2rem;
+  width: 100%;
+  text-align: center;
+}
+div#soyArt {
+  background-color: #8667A6;   
+}
+div#soyArt:hover {
+  background-image: url(../src/mocks/productList/img/concert2.jpg);
+  background-size: cover;
+  background-position-y: -7.3rem;
+}
+div#soyCont {
+  background-color: #A41E62;
+}
+#soyCont h2{
+  color: #E9E0F5;
+}
+div#soyCont:hover {
+  background-image: url(../src/mocks/productList/img/concert2.jpg);
+  background-size: cover;
+  background-position-y: -10.8rem;
+}
+div#soyFan {
+  background-color: #FDD8E9;
+}
+div#soyFan:hover {
+  background-image: url(../src/mocks/productList/img/concert2.jpg);
+  background-size: cover;
+  background-position-y: center;
+}
+.secWeb h2 {
+  width: 100%;
+  font-size: 2.5rem;
+}
+.blur {
+  transition: 0.5s;
+}
+.titulo {
+  margin-top: -2rem;  
+}
+div.cardband {
+  margin-top: 2.5rem;
+  margin-left:1.5rem ;
+}
+div.infoband {
+  margin: 1rem 2.5rem 0rem 2rem;
+  text-align: justify;
+}
+.masinfo {
+  text-align: center;
+  padding-right: 3rem;
+  padding-top: 1rem;
+  font-size: 2rem;
+}
+a.masinfo {
+  color: #A41E62;
+  text-decoration: #A41E62;
+  text-decoration-line: underline;
+}
+a.masinfo:hover {
+  color: #533B4D;
+  text-decoration: #533B4D;
+  text-decoration-line: underline;
+}
+#loading img {
+  width: 100%;
+  filter: hue-rotate(318deg) brightness(1);
+  opacity: 0.8;
+}
+.productos-lista table td:first-child, .productos-lista table th:first-child {
+  width: 10rem;
+  padding-left: 0.4rem;
+}
+.productos-lista table td:nth-child(2), .productos-lista table th:nth-child(2) {
+  text-align: justify;
+  padding: 0.5rem 1.5rem 0.5rem 1rem;
+}
+.productos-lista table td:nth-child(3) {
+  width: 6rem;
+}
+.productos-lista table td:last-child, .productos-lista table th:last-child {
+  padding-right: 0.4rem;
+}
+.productos-lista table {
+  margin-right:1rem ;
+  background-color: rgba(83, 59, 77, 0.2);
+}
+.productos-lista {
+  margin:1rem 1rem 1rem 0rem;
+  padding: 0rem;
+}
+#carritoLista {
+  position: fixed;
+  z-index: 100;
+  top: 7rem;
+  transform: translateX(57rem);
+  width: 23rem;
+  background-color: #E9E0F5;
+  padding: 2rem;
+}
+#carritoLista table td, #carritoLista table th{
+ padding: 0rem 0.5rem;
+}
+#carritoLista table td:first-child, #carritoLista table th:first-child{
+  width: 13rem;
+}
+#carritoLista table td:last-child, #carritoLista table th:last-child{
+  width: 8rem;
+  text-align: right;
+}
+.carrito:hover {
+  filter: drop-shadow(2px 2px 2px #6D517A);
+}
+.nosub div, .nosub h2, .nosub h3, a.nosub {
+  text-decoration: none;
+}
+p.pserv {
+  padding-right: 2.2rem;
+  text-align: justify;
+}
+div.plataformas {
+  width: 25rem;
+  margin-right: 3rem;
+  padding-right: 1rem;
+  margin-top: 1rem;
+  transform: translateX(79px);
+}
+.plataformas img:hover {
+  filter: drop-shadow(2px 4px 6px #533B4D);
+}
+.contact-block {
+  width: 30rem;
+  text-align: right;
+  margin-right: 3rem;
+  margin-bottom: 1rem;
+}
+.contact-block:first-child {
+  margin-top: 1rem;
+}
+.othercontact h3 {
+  text-align: right;
+  margin-right: 3.5rem;
+}
+
+a { 
+  color: #533B4D;
+}
+a:hover {
+  color: #7C2D58;
+  text-decoration: none;
+}
+#btnCont a {
+  color: #FDD8E9;
+}
+#btnCont a:hover {
+  color: #E9E0F5;
+  filter: drop-shadow(2px 6px 6px #DE76A9);
+}
+h3#btnCont {
+  color: #FDD8E9;
+  margin-top: 2rem;
+}
+h3#btnFan, h3#btnArt {
+  filter: drop-shadow(1px 1px 1px white);
+  margin-top: 2rem;
+}
+
+button, input#enviarCont, .enviarinput, #validarDatos{
+  width: 13rem;
+  display: flex;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  font-size: 1.05rem;
+  background-color: rgba(256, 256, 256, 0.6);
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+  color: #533B4D;
+  padding-left: 0px;
+}
+.enviarinput {
+  background-color: rgba(256, 256, 256, 0.8);
+}
+button:hover, button:focus, input#enviarCont:hover, .enviarinput:hover, input#enviarCont:focus, .enviarinput:focus{
+  filter: drop-shadow(2px 4px 6px #DE76A9);
+}
+button.altsecbtn {
+  margin-left: 43.5%;
+}
+button.altservbtn {
+  margin-left: 33.5%;
+}
+#detalles {
+  transform: translateY(-3rem);
+}
+#validarbox{
+  transform: translateY(589px) translateX(192px);
+}
+textarea {
+  height: 7rem;
+  font-family: Lobster, cursive;
+  background-color: #C14A86;
+  padding-left: 0.5rem;
+  border: none;
+  border-bottom: #6D517A solid 1px;
+  border-right: #6D517A solid 1px;
+}
+#validarbox {
+  width: 14rem;
+  height: 3rem;
+  position: absolute;
+}
+
+#datoinvalido {
+  text-align: center;
+  background-color: rgba(255, 0, 0, 0.5);
+  margin-bottom: 10px;
+  border-radius: 0.3rem;
+}
+div#footercopy {
+  height: 3rem;
+  background-color: #E9E0F5;
+}
+#footercopy p {
+  padding-top: 1rem;
+  font-size: 1.1rem;
+}
+::placeholder {
+  color: #6B4C65;
+  opacity: 0.8;
+}
+#parallaxuno {
+  height: 70vh;
+  background-image: url(../src/mocks/productList/img/concert2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+#parallaxdos {
+  height: 70vh;
+  background-image: url(../src/mocks/productList/img/concert2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+input.checkbox {
+  opacity: 0.1;
+}
+#enviarinput:hover{
+  background-color: #543B50;
+  color: #E9E0F5;
+}
+
+
+/*css nuevo */
+
+button.confirmar {
+  width: 15rem;
+}
+button.oper {
+  width: 2rem;
+    height: 2rem;
+    margin: 0px;
+    border: none;
+    background-color: pink;
+    border-right: brown 2px solid;
+}
+button.oper:disabled {
+    background-color: rgb(189, 157, 162);
+    border-right: lightcoral 2px solid;
+}
+button.oper:disabled:hover {
+  filter: none;
+}
+.contadorBox {
+  display: flex;
+  flex-direction: row;
+  width: 15rem;
+  justify-content: space-around;
+  align-items: baseline;
+}
+.operBox {
+  justify-content: space-between;
+  border: brown 1px solid;
+  display: flex;
+  flex-direction: row;
+  width: 7rem;
+}
+.carritoicon p {
+  margin-left: 5px;
 }

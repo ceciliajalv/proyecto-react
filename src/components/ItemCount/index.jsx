@@ -1,14 +1,17 @@
 export const ItemCount = ({stock, onAdd, onSub, onBuy, contador, btnCompra}) => {
     return (
     <>
-        <div>
-            <button onClick={onSub} disabled={contador == 1}>-</button>
-            <b>{contador}</b>
-            <button  onClick={onAdd} disabled={contador == stock || contador > stock}>+</button>
+        <div className='contadorBox'>
+            <div className='operBox'>
+                <button className='oper' onClick={onSub} disabled={contador == 1}>-</button>
+                <b>{contador}</b>
+                <button className='oper'  onClick={onAdd} disabled={contador == stock || contador > stock}>+</button>
+            </div>
+            
             <p>Stock:{stock}</p>
         </div>
         <div>
-            <button onClick={onBuy} disabled={stock == 0}>{btnCompra}</button>
+            <button className='confirmar' onClick={onBuy} disabled={stock == 0}>{btnCompra}</button>
         </div>
 
         
