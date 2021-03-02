@@ -600,3 +600,25 @@ button.oper:disabled:hover {
 .carritoicon p {
   margin-left: 5px;
 }
+h3.totalProd, h3.titleCart {
+  font-size: 2rem;
+}
+div.cardCart {
+  width: 60%;
+  margin: 0.5rem;
+  border: solid 1px pink;
+  padding: 1rem;
+}
+.cardCart h4 {
+  font-size: 1.3rem;
+}
+.dato-compra {
+  margin-right: 3rem;
+}
+.delete-item {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+div.listContainerCart {
+  margin: 0px;
+}

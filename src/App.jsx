@@ -13,7 +13,8 @@ import ContactoContainer from './Containers/ContactoContainer/index.jsx';
 import CategoriaContainer from './Containers/CategoriaContainer';
 import Cart from './components/cart';
 import { GlobalContext } from './context/GlobalContext';
-import CartProvider from './context/cartContext/'
+import CartProvider from './context/cartContext/';
+import CartItem from './components/cartItems/'
 
 const App = () => {
   return (
@@ -45,6 +46,9 @@ const App = () => {
       </Route>
       <Route exact path = '/cart'>
         <Cart />
+      </Route>
+      <Route exact path = '/pruebacart'>
+        <CartItem />
       </Route>
       <Route path="*" children={<div>No encontramos la página que está buscando.</div>} />
     </Switch>

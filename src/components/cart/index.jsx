@@ -9,6 +9,7 @@ import {CartContext} from '../../context/cartContext/'
 import CartItem from '../cartItems/'
 import CartList from '../CartList/'
 import loader from '../../mocks/productList/img/loading-02.gif'
+import CartListBox from '../CartListBox/'
 
 const Cart = (Cproduct) => {
     const {pTotal, product, qCart} = useContext(CartContext)
@@ -22,7 +23,7 @@ const Cart = (Cproduct) => {
         if (qCart() >= 1) {
             return <>
             <h2>Su compra</h2>
-            <p>Aca se van a ver los productos cuando logre configurarlo...</p>
+            <CartListBox/>
             <h3>Precio total: ${pTotal()}</h3>
             <button>Confirmar compra</button>
             </>

@@ -3,15 +3,16 @@ import {Link} from 'react-router-dom'
 import {CartContext} from '../../context/cartContext/'
 import {useContext} from 'react'
 
-const ItemList = ({products}) => {
+const CartList = ({cartProds}) => {
+    const {pTotal, product, qCart} = useContext(CartContext)
     return (
         <div className="listProd">
-            {products.map((product)=> {
+            {cartProds.map((cartProd)=> {
                 return <>
-                 <CartItem key={product.id} product={product} />
+                 <CartItem key={cartProd.id} cartProd={cartProd} />
                 </>
             })}
         </div>
     )
 }
-export default ItemList;
+export default CartList;
