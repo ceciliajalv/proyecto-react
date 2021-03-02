@@ -22,7 +22,6 @@ const CartListBox = ({servicios},) => {
     return (
         <>
         <div className='listContainerCart'>
-        <h2>Adquirí nuestros productos</h2>
             <CartList cartProds={cartProds}/>
         </div>
         
