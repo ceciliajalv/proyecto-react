@@ -12,7 +12,6 @@ const ItemDetail = ({item}) => {
     const [stock, setStock] = useState(1)
     const [btnCompra, setBtnCompra] = useState("Comprar")
     const [quantity, setQuantity] = useState (0)
-    const [priceTot, setPriceTot] = useState(0)
 
     const { addCart , product} = useContext(CartContext)
 
@@ -46,9 +45,7 @@ const ItemDetail = ({item}) => {
         } 
         
         console.log ('Se agregaron ', contador, ' productos al carrito');
-        setPriceTot(item.price * contador);
-        console.log('priceTot', priceTot);
-        addCart ({item: item, cantidad: contador, price: item.price, name: item.name, id: item.id, priceTot: priceTot});
+        addCart ({item: item, cantidad: contador, price: item.price, name: item.name, id: item.id});
         document.getElementById('terminarCompra').style.visibility = "visible";
     }
     console.log ([product])
