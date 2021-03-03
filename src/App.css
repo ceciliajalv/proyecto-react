@@ -575,6 +575,7 @@ button.oper {
     border: none;
     background-color: pink;
     border-right: brown 2px solid;
+    border-radius: 0px;
 }
 button.oper:disabled {
     background-color: rgb(189, 157, 162);

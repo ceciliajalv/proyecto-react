@@ -4,6 +4,7 @@ import CartWidget from '../CartWidget/index.jsx';
 
 const NavBar = () => {
     return (
+      <header>
         <nav className="navbar navbar-expand-lg navbar-bordeaux">
         <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
@@ -33,6 +34,7 @@ const NavBar = () => {
               <CartWidget/>
         </div>
       </nav>    
+      </header>
     )
 }
 
