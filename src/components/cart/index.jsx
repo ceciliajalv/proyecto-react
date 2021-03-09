@@ -25,7 +25,12 @@ const Cart = (Cproduct) => {
         let newOrder = {buyer: {name: nombre, email: correo, telefono:telefono}, items: [...product], total: [pTotal()] };
         const baseDeDatos = getFirestore(); 
         const OrdenesCollection = baseDeDatos.collection("ordenes"); 
-        OrdenesCollection.add(newOrder)
+        OrdenesCollection.add(newOrder).then((value) => {
+            console.log('nro de orden', value.id);
+        })
+        // const itemCollection = baseDeDatos.collection("item"); 
+        // const itemDoc = itemCollection.doc(id)
+        // itemCollection.doc(itemDoc).update({stock: })
         // const itemDoc = itemCollection.doc(id)
         // itemDoc.get().then((doc) => {
         //     if (!doc.exists) {
@@ -43,19 +48,18 @@ const Cart = (Cproduct) => {
                 setLoading(false);
         }, 2000);    
     }, []);
+    
     const HayItems = () => {
+        const ConfirmarCompra = () => {
+        document.getElementById("confirmarCompra").style.visibility = "visible";
+    }
         if (qCart() >= 1) {
             return <>
             <h2>Su compra</h2>
             <CartListBox/>
             <h3>Precio total: ${pTotal()}</h3>
-            <div id='confirmarCompra'>
-                <input type="text" placeholder="Nombre Completo" onBlur={(e) => {setNombre(e.target.value)}}/>
-                <input type="text" placeholder="Correo Electrónico" onBlur={(e) => {setCorreo(e.target.value)}}/>
-                <input type="text" placeholder="Teléfono" onBlur={(e) => {setTelefono(e.target.value)}}/>
-                
-            </div>
-            <button onClick={() =>{finalizarCompra()}} >Confirmar compra</button>
+            <button onClick={() =>{ConfirmarCompra()}}>Confirmar Compra</button>
+            
             </>
         } else {
             return <>
@@ -68,7 +72,12 @@ const Cart = (Cproduct) => {
     }
     return (
         <>  
-        {loading ? <div><h2>Estamos cargando sus productos...</h2><img src={loader} alt=""/></div> : <HayItems /> }
+        {loading ? <div><h2>Estamos cargando sus productos...</h2><img src={loader} alt=""/></div> : <><HayItems /><div id='confirmarCompra' className='d-flex flex-column align-items-center'><form className='d-flex flex-column align-items-center' action=""><input type="text" placeholder="Nombre Completo" required className='datoContacto' onBlur={(e) => {setNombre(e.target.value)}}/>
+                <input type="email" placeholder="Correo Electrónico" required className='datoContacto' onBlur={(e) => {setCorreo(e.target.value)}}/>
+                <input type="text" placeholder="Teléfono" required className='datoContacto' onBlur={(e) => {setTelefono(e.target.value)}}/></form>
+                
+                <button onClick={() =>{finalizarCompra()}} >Terminar Pedido</button>
+         </div></>}
         </>
         )
 }

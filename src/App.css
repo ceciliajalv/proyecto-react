@@ -2,6 +2,9 @@
 .App {
   text-align: center;
 }
+body {
+  overflow-x: hidden;
+}
 
 .App-logo {
   height: 40vmin;
@@ -74,6 +77,9 @@ div.carritoicon{
 }
 
 #terminarCompra {
+  visibility: hidden;
+}
+#confirmarCompra {
   visibility: hidden;
 }
 
@@ -185,6 +191,13 @@ section#hero {
   background-image: url(../src/mocks/productList/img/concert2.jpg);
   background-size: cover;
   background-position-y: -7rem;
+  filter: hue-rotate(
+    330deg
+    );
+}
+section#hero h2 {
+  width: 52%;
+  margin-left: 2rem;
 }
 section#aboutUs, section#contrataciones {
   background-color: #FDD8E9;
@@ -622,4 +635,13 @@ div.cardCart {
 }
 div.listContainerCart {
   margin: 0px;
+}
+#confirmarCompra {
+  margin: 2rem;
+
+}
+input.datoContacto {
+  width: 25rem;
+  margin-bottom: 2rem;
+  border-right:  #6D517A solid 1px;
 }

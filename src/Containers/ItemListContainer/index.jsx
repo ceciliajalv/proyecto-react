@@ -36,8 +36,10 @@ const ItemListContainer = ({servicios},) => {
 
     return (
         <>
+        <section id="hero" class="d-flex flex-column justify-content-center align-items-start">
+            <h2>Adquirí nuestros productos</h2>
+        </section>
         <div className='listContainer'>
-        <h2>Adquirí nuestros productos</h2>
             <ItemList products={products}/>
         </div>
         
