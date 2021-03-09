@@ -19,8 +19,16 @@ const CategoriaContainer = () => {
         if (querySnapshot.size === 0) {
             console.log('No hubo resultados');
         }
-        setProducts(querySnapshot.docs.map(doc => doc.data()));
+        setProducts(querySnapshot.docs.map(doc => ({...doc.data(), id: doc.id})));
     })
+    // catFilter.get().then((querySnapshot) => {
+    //   if (querySnapshot.size === 0) {
+    //     console.log("No hubo resultados");
+    //   }
+    //   setProducts(
+    //     querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+    //   );
+    // }); 
     // React.useEffect(()=>{
     //     let categoria = productList.filter ( (element) => {
     //         return element.categoria === idCat

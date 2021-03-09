@@ -50,7 +50,7 @@ const App = () => {
       <Route exact path = '/pruebacart'>
         <CartItem />
       </Route>
-      <Route path="*" children={<div>No encontramos la página que está buscando.</div>} />
+      <Route path="*" children={<div>No encontramos la página que está buscando. <img src="../src/mocks/productList/img/logo.png" alt="" /></div>} />
     </Switch>
  
   </CartProvider>
