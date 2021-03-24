@@ -5,6 +5,7 @@ import productList from "../../mocks/productList/index"
 import { ItemCount } from "../../components/ItemCount";
 import ItemDetail from "../../components/itemDetail";
 import { getFirestore } from "../../firebase";
+import loader from '../../mocks/productList/img/loading-02.gif';
 
 
 const ItemDetailContainer = () => {
@@ -28,62 +29,27 @@ const ItemDetailContainer = () => {
            console.log("Error en la busqueda de items", error);
         }) 
     }, []);
-   
+    if (item.length==0) {
+        return (
+            setTimeout(() => {
+                <>
+                <h3>No pudimos encontrar el producto que estaba buscando</h3>
+                </>
+            }, 400),
+            <>
+            <img className="loader" src={loader} alt="Cargando" />
+            </>
+        );
+    }
+    else {
+        return (
+            <>
+            <ItemDetail item={item}/>
+            </>
+        )
+    }
 
-    return (
-        <>
-        <ItemDetail item={item}/>
-        </>
-    )
+    
 }
 console.log(productList)
 export default ItemDetailContainer;
-
-
- //     const baseDeDatos = getFirestore(); //conecta con la base
-    //     const itemCollection = baseDeDatos.collection('item'); //Referencia a la coleccion. item es mi coleccion de fb
-    //     //toma datos
-    //     itemCollection.get().then((value) => {
-    //         value.docs.map(element => {console.log(element.data)})
-    //     })
-
-    // //    const miPromesa = new Promise ((resolve, reject) =>{
-    // //     setTimeout(() =>
-    // //         resolve(productList), 2000);
-
-
-
-
-
-    // React.useEffect(()=>{
-    //    const miPromesaDos = new Promise ((resolve, reject) =>{
-    //     const producDetail = productList.find(prod => prod.id === id)
-    //     setTimeout(() =>
-    //         resolve(productList[id]), 2000);
-            
-    // });
-
-    // miPromesaDos.then((result) => setItem(result)); 
-    // }, [id]);
-
-
-
-     //     itemCollection.get().then((value) => {
-    //         let aux = value.docs.map(element => { 
-    //             return {...element.data(), id:element.id}
-    //         })
-    //         console.log(aux);
-    //         setItemList(aux);
-    //         const producDetail = productList.find(prod => prod.id === id)
-    //         // resolve(itemList[id]);
-    //         setItem(itemList[id])
-    //     })
-
-
-   
-    // }, []);
-    
-
-    //.finally(() => {
-          //  setLoading(false);
-        //});

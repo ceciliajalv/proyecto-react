@@ -84,9 +84,9 @@ div.carritoicon{
 #terminarCompra {
   visibility: hidden;
 }
-#confirmarCompra {
+/* #confirmarCompra {
   visibility: hidden;
-}
+} */
 
 
 
@@ -589,6 +589,7 @@ input.checkbox {
 
 button.confirmar {
   width: 15rem;
+  margin: 0rem;
 }
 button.oper {
   width: 2rem;
@@ -619,6 +620,7 @@ button.oper:disabled:hover {
   display: flex;
   flex-direction: row;
   width: 7rem;
+  margin-bottom: 1rem;
 }
 .carritoicon p {
   margin-left: 5px;
@@ -641,6 +643,13 @@ div.cardCart {
 .delete-item {
   font-size: 1rem;
   margin-top: 1rem;
+  cursor: pointer;
+
+}
+.delete-item:hover {
+  color: #6B4C65;
+  text-decoration: #6D517A underline;
+  cursor: pointer;
 }
 div.listContainerCart {
   margin: 0px;
@@ -653,4 +662,31 @@ input.datoContacto {
   width: 25rem;
   margin-bottom: 2rem;
   border-right:  #6D517A solid 1px;
+}
+.itemDetail{
+  height: 80vh;
+  margin: 3rem;
+}
+.cart {
+  margin-left: 4rem;
+}
+.confirmaCompra:last-child {
+  margin-top: 2rem;
+}
+.confirmaCompra:first-child {
+  margin-bottom: 0rem;
+}
+#orderConfirm {
+  visibility: hidden;
+  position: absolute;
+  top: 5rem;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 3rem;
+  text-align: center;
+}
+#errormail {
+  color: red;
+  font-size: 1rem;
+  visibility: hidden;
 }

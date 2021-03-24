@@ -12,9 +12,13 @@ import ArtistasContainer from './Containers/ArtistasContainer';
 import ContactoContainer from './Containers/ContactoContainer/index.jsx';
 import CategoriaContainer from './Containers/CategoriaContainer';
 import Cart from './components/cart';
+import Customer from './components/customer';
+import OrderConfirm from './components/orderConfirm';
 import { GlobalContext } from './context/GlobalContext';
 import CartProvider from './context/cartContext/';
-import CartItem from './components/cartItems/'
+import CartItem from './components/cartItems/';
+import ArtistaDetailContainer from './Containers/ArtistaDetailContainer';
+
 
 const App = () => {
   return (
@@ -35,6 +39,9 @@ const App = () => {
       <Route exact path = '/artistas'>
         <ArtistasContainer />
       </Route>
+      <Route exact path = '/artista/:id'>
+        <ArtistaDetailContainer />
+      </Route>
       <Route exact path = '/productos/:id'>
         <ItemDetailContainer />
       </Route>
@@ -46,6 +53,12 @@ const App = () => {
       </Route>
       <Route exact path = '/cart'>
         <Cart />
+      </Route>
+      <Route exact path = '/customer'>
+        <Customer />
+      </Route>
+      <Route exact path = '/orderConfirm'>
+        <OrderConfirm />
       </Route>
       <Route exact path = '/pruebacart'>
         <CartItem />

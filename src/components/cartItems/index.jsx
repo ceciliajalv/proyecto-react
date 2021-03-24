@@ -8,7 +8,7 @@ import {useContext} from 'react'
 import {CartContext} from '../../context/cartContext/'
 
 const CartItem = ({cartProd}) => {
-    const {pTotal, product, qCart} = useContext(CartContext)
+    const {deleteProd, pTotal, product, qCart} = useContext(CartContext)
     return (
     <>
         <div className="d-flex flex-row cardCart justify-content-between">
@@ -30,7 +30,7 @@ const CartItem = ({cartProd}) => {
                     <h4 className="dato-compra">Cantidad: {cartProd.cantidad}</h4>
                     <h4 className="dato-compra">Precio unitario: ${cartProd.price}</h4>
                 </div>
-                <h4 className="delete-item">Eliminar producto</h4>
+                <h4 className="delete-item" onClick={() => deleteProd(cartProd)}>Eliminar producto</h4>
                 
             </div>
             

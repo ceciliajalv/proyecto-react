@@ -5,6 +5,9 @@ export const CartContext = createContext();
 export const CartProvider = ({ children }) => {
     const [product, setProduct] = useState([]);
     console.log(product);
+    const clearCart  = () => {
+      setProduct([]);
+    }
     const addCart = (item) => {
         debugger
         console.log(item);
@@ -40,6 +43,10 @@ export const CartProvider = ({ children }) => {
         return mapPrice.reduce((acc, prc) => acc += prc, 0);
     }
     console.log('qCart', qCart)
+    const deleteProd = (prod) => {
+      const listaNueva = product.filter((item) => prod.item.id !== item.item.id)
+      setProduct(listaNueva);
+    };  
   return (
     <CartContext.Provider
       value={{
@@ -47,6 +54,8 @@ export const CartProvider = ({ children }) => {
         addCart,
         qCart,
         pTotal,
+        deleteProd,
+        clearCart
       }}
     >
       {children}

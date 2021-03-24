@@ -4,6 +4,7 @@ import { ItemCount } from "../../components/ItemCount";
 import productList from "../../mocks/productList/index"
 import ItemList from "../../components/itemList/"
 import { getFirestore } from "../../firebase";
+import loader from '../../mocks/productList/img/loading-02.gif';
 
 const ItemListContainer = ({servicios},) => {
     const [products, setProducts] = useState([]);
@@ -35,15 +36,14 @@ const ItemListContainer = ({servicios},) => {
     // } , []);    
 
     return (
-        <>
-        <section id="hero" class="d-flex flex-column justify-content-center align-items-start">
-            <h2>Adquirí nuestros productos</h2>
-        </section>
-        <div className='listContainer'>
-            <ItemList products={products}/>
-        </div>
-        
-        </>
-    )
+            <>
+            <section id="hero" class="d-flex flex-column justify-content-center align-items-start">
+                <h2>Adquirí nuestros productos</h2>
+            </section>
+            <div className='listContainer'>
+                <ItemList products={products}/>
+            </div>
+            </>
+    );
 }
 export default ItemListContainer;

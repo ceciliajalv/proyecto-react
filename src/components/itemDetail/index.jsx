@@ -52,16 +52,21 @@ const ItemDetail = ({item}) => {
     
 return (
     <>
-    <div key={item.id} product={item} onLoad={Load}>
+    <div key={item.id} product={item} onLoad={Load} className="d-flex flex-column justify-content-around itemDetail">
         <h2>{item.name}</h2>
-        <img src={item.foto}></img>
-        <p>Descripcion: {item.descripcion}</p>
-        <p>Precio: ${item.price}</p>
-        <ItemCount contador={contador} onAdd={onAdd} onSub={onSub} onBuy={onBuy} btnCompra={btnCompra} stock={stock}/>
-        <div id='terminarCompra'>
-            <p>Se han agregado exitosamente {quantity} {item.name} al carrito</p>
-            <Link to={`/cart`} quantity={quantity}><button className='confirmar'>Terminar compra</button></Link> 
+        <div className="d-flex flex-row justify-content-between">
+            <img src={item.foto}></img>
+            <div className="d-flex flex-column justify-content-between">
+               
+                <p>Precio: ${item.price}</p>
+                <ItemCount contador={contador} onAdd={onAdd} onSub={onSub} onBuy={onBuy} btnCompra={btnCompra} stock={stock}/>
+                <div id='terminarCompra' className="d-flex flex-column justify-items-center confirmaCompra">
+                    <p>Se han agregado exitosamente {quantity} {item.name} al carrito</p>
+                    <Link to={`/cart`} quantity={quantity}><button className='confirmar'>Terminar compra</button></Link> 
+                </div>
+            </div>            
         </div>
+        <p>Descripcion: {item.descripcion}</p>
     </div>
     </>
 )

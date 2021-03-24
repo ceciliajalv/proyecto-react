@@ -1,7 +1,7 @@
 export const ItemCount = ({stock, onAdd, onSub, onBuy, contador, btnCompra}) => {
     return (
     <>
-        <div className='contadorBox'>
+        <div className='contadorBox d-flex flex-column justify-content-between'>
             <div className='operBox'>
                 <button className='oper' onClick={onSub} disabled={contador == 1}>-</button>
                 <b>{contador}</b>

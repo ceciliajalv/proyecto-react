@@ -5,6 +5,7 @@ import { ItemCount } from "../../components/ItemCount";
 import productList from "../../mocks/productList/index"
 import ItemList from "../../components/itemList/"
 import { getFirestore } from "../../firebase";
+import loader from '../../mocks/productList/img/loading-02.gif';
 
 const CategoriaContainer = () => {
     const {idCat} = useParams ();
@@ -35,12 +36,25 @@ const CategoriaContainer = () => {
     //     });
     //     setProducts(categoria);
     // }, [idCat]) 
-
-    return (
-        <>
-        <h2>Adquirí nuestros productos de {idCat}</h2>
-        <ItemList products={products}/>
-        </>
-    )
+    if (products.length==0) {
+        return (
+            setTimeout(() => {
+                <h2>Lo sentimos. No encontramos productos de la categoria {idCat}</h2>
+            }, 400),
+            <>
+            <img className="loader" src={loader} alt="Cargando" />
+            </>
+            
+        )
+    }
+    else {
+        return (            
+            <>
+            <h2>Adquirí nuestros productos de {idCat}</h2>
+            <ItemList products={products}/>
+            </>
+        )
+    }
+    
 }
 export default CategoriaContainer;
