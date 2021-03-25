@@ -48,7 +48,7 @@ const Cart = (Cproduct) => {
     }
     return (
         <>  
-        {loading ? <div><h2>Estamos cargando sus productos...</h2><img className="loader" src={loader} alt=""/></div> : <><HayItems /></>}
+        {loading ? <div><h2>Estamos cargando sus productos...</h2><img className="loader" src={loader} alt="" /></div> : <><HayItems /></>}
         </>
         )
 }

@@ -690,3 +690,6 @@ input.datoContacto {
   font-size: 1rem;
   visibility: hidden;
 }
+img.loader {
+  filter: hue-rotate(21deg);
+}

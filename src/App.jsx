@@ -13,7 +13,7 @@ import ContactoContainer from './Containers/ContactoContainer/index.jsx';
 import CategoriaContainer from './Containers/CategoriaContainer';
 import Cart from './components/cart';
 import Customer from './components/customer';
-import OrderConfirm from './components/orderConfirm';
+// import OrderConfirm from './components/orderConfirm';
 import { GlobalContext } from './context/GlobalContext';
 import CartProvider from './context/cartContext/';
 import CartItem from './components/cartItems/';
@@ -57,9 +57,9 @@ const App = () => {
       <Route exact path = '/customer'>
         <Customer />
       </Route>
-      <Route exact path = '/orderConfirm'>
+      {/* <Route exact path = '/orderConfirm'>
         <OrderConfirm />
-      </Route>
+      </Route> */}
       <Route exact path = '/pruebacart'>
         <CartItem />
       </Route>

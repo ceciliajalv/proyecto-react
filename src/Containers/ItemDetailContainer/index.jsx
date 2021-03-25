@@ -37,7 +37,7 @@ const ItemDetailContainer = () => {
                 </>
             }, 400),
             <>
-            <img className="loader" src={loader} alt="Cargando" />
+            <img className="loader" src={loader} alt="Cargando"  />
             </>
         );
     }

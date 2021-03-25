@@ -50,6 +50,7 @@ const ArtistasContainer = () => {
         setProducts(querySnapshot.docs.map(doc => ({...doc.data(), id: doc.id})));
     })
     if (bandas.length==0) {
+        debugger
         return (
             setTimeout(() => {
                 <>
