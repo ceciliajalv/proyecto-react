@@ -9,16 +9,6 @@
 }
 body {
   overflow-x: hidden;
-  background-color: #F1E8EB;
-}
-div.card {
-  background-color: rgba(222, 118, 169, 0.3);
-}
-.card button {
-  background-color: rgba(109, 81, 122, 0.6);
-  border: #F1E8EB 1.5px solid;
-  color: #F1E8EB;
-  font-weight: 300;
 }
 
 .App-logo {
@@ -552,7 +542,7 @@ button.altservbtn {
 textarea {
   height: 7rem;
   font-family: Lobster, cursive;
-  background-color: rgba(222, 118, 169, 0.3);
+  background-color: #C14A86;
   padding-left: 0.5rem;
   border: none;
   border-bottom: #6D517A solid 1px;
@@ -651,7 +641,6 @@ div.cardCart {
   margin: 0.5rem;
   border: solid 1px pink;
   padding: 1rem;
-  background-color:rgba(222, 118, 169, 0.3);
 }
 .cardCart h4 {
   font-size: 1.3rem;
@@ -687,15 +676,7 @@ input.datoContacto {
   margin: 1rem;
 }
 .itemDetail img{
-  margin-left: 1rem;
-  margin-right: 1rem;
-  height: 22rem;
-}
-div.boxItemDetail {
-  margin: 1rem;
-}
-.itemDetail>p {
-  margin-top: 1rem;
+  margin: 0rem 0rem 2rem 2rem;
 }
 .cart {
   margin-left: 4rem;

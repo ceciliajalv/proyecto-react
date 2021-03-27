@@ -54,9 +54,9 @@ return (
     <>
     <div key={item.id} product={item} onLoad={Load} className="d-flex flex-column justify-content-around itemDetail">
         <h2>{item.name}</h2>
-        <div className="d-flex flex-row justify-content-between">
+        <div className="d-flex flex-row justify-content-between boxItemDetail">
             <img src={item.foto}></img>
-            <div className="d-flex flex-column justify-content-between">
+            <div className="d-flex flex-column justify-content-around">
                
                 <p>Precio: ${item.price}</p>
                 <ItemCount contador={contador} onAdd={onAdd} onSub={onSub} onBuy={onBuy} btnCompra={btnCompra} stock={stock}/>

@@ -74,7 +74,7 @@ const Customer = (Cproduct) => {
          </div>
          <div id="orderConfirm">
             <h2 >¡Muchas Gracias por su compra, {nombre}!</h2>
-            <h3>Estará recibiendo un email de confirmación en {correo} a la brevedas</h3>
+            <h3>Estará recibiendo un email de confirmación en {correo} a la brevedad</h3>
             <h4>Su número de orden es: {order}</h4>
 
 

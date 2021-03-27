@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+Este proyecto pertenece a la empresa ficticia Cisum Evil. 
+Cisum Evil simula ser una compañía de booking y management musical que trabaja para 3 tipos de clientes: 
+1) Promotoras, productoras y empresas que contratar a nuestros artistas para sus shows (B2B).
+2) Artistas y bandas que son representados por la empresa (a lo que llamamos B2A como business to artist).
+3) Seguidores/fans de las bandas (B2C).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+En este proyecto se realizó una parte de lo que sería la web para el target C. Es un e-commerce donde el público puede comprar el merchandising de las bandas y entradas/pases VIP para shows, así como también de la empresa en sí. También pueden en el mismo sitio obtener más información sobre los artistas de su interés.
 
-## Available Scripts
+Navegación:
 
-In the project directory, you can run:
+En el index se puede ver un poco de información sobre la empresa y más abajo acceder a todo el listado de productos disponibles.
+En la página de productos también se puede ver todos los productos disponibles. Además en el navegador se pueden ver pestañas de "merch" y "VIP", llevando cada una a un filtro por cada categoría.
+También, en caso de entrar a la información de un artista, en su página se pueden ver todos los productos disponibles que corresponden a dicho artista, representando un tipo de categoría más pero por artista en vez de por tipo de producto.
+El cart aparece una vez agregado algún producto al carrito. Y se puede acceder a la pantalla del cart tanto tocando en el header el logo o número del carrito como cliqueando "terminar compra" al agregar un producto.
 
-### `npm start`
+Herramientas:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+El sitio está hecho utilizando React.js. Cuenta con estilos de Bootstrap también,y la base de datos está hecha en Firebase. 
+La base de datos cuenta con las siguientes colecciones:
+a) Items: son los productos disponibles en el e-commerce.
+b) Artistas: Cuenta con la información de los músicos con los que la empresa trabaja.
+c) Ordenes: Contiene la información de los compradores y las órdenes generadas en la página.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
