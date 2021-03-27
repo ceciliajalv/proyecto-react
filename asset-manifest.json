@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/proyecto-react/static/css/main.503bf995.chunk.css",
-    "main.js": "/proyecto-react/static/js/main.63f7335a.chunk.js",
-    "main.js.map": "/proyecto-react/static/js/main.63f7335a.chunk.js.map",
+    "main.css": "/proyecto-react/static/css/main.a3951998.chunk.css",
+    "main.js": "/proyecto-react/static/js/main.b6af0c1e.chunk.js",
+    "main.js.map": "/proyecto-react/static/js/main.b6af0c1e.chunk.js.map",
     "runtime-main.js": "/proyecto-react/static/js/runtime-main.345a74e0.js",
     "runtime-main.js.map": "/proyecto-react/static/js/runtime-main.345a74e0.js.map",
     "static/css/2.150d169a.chunk.css": "/proyecto-react/static/css/2.150d169a.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.baa3479f.chunk.js.map": "/proyecto-react/static/js/3.baa3479f.chunk.js.map",
     "index.html": "/proyecto-react/index.html",
     "static/css/2.150d169a.chunk.css.map": "/proyecto-react/static/css/2.150d169a.chunk.css.map",
-    "static/css/main.503bf995.chunk.css.map": "/proyecto-react/static/css/main.503bf995.chunk.css.map",
+    "static/css/main.a3951998.chunk.css.map": "/proyecto-react/static/css/main.a3951998.chunk.css.map",
     "static/js/2.fae20a04.chunk.js.LICENSE.txt": "/proyecto-react/static/js/2.fae20a04.chunk.js.LICENSE.txt",
     "static/media/App.css": "/proyecto-react/static/media/concert2.c20adaa4.jpg",
     "static/media/loading-02.45df2d82.gif": "/proyecto-react/static/media/loading-02.45df2d82.gif",
@@ -22,7 +22,7 @@
     "static/js/runtime-main.345a74e0.js",
     "static/css/2.150d169a.chunk.css",
     "static/js/2.fae20a04.chunk.js",
-    "static/css/main.503bf995.chunk.css",
-    "static/js/main.63f7335a.chunk.js"
+    "static/css/main.a3951998.chunk.css",
+    "static/js/main.b6af0c1e.chunk.js"
   ]
 }
